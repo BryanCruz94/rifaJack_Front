@@ -4,7 +4,8 @@ async function handleCredentialResponse(response) {
     if (!email) return alert("No se pudo obtener el email");
 
     try {
-        const res = await fetch(`http://localhost:3000/api/verificar-evaluador?email=${encodeURIComponent(email)}`);
+        //const res = await fetch(`http://localhost:3000/api/verificar-evaluador?email=${encodeURIComponent(email)}`);
+        const res = await fetch(`https://rifajackback-production.up.railway.app/api/verificar-evaluador?email=${encodeURIComponent(email)}`);
         const result = await res.json();
 
         if (result.autorizado) {

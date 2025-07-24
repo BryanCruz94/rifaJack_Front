@@ -12,6 +12,7 @@
 <body class="container mt-4 mb-5">
 
   <h2 class="text-center">🎫 RIFA SOLIDARIA DE AMIGOS DE JACK</h2>
+  <p class="text-center">Fecha de rifa: 01 Agosto de 2025</p>
 
   <div class="d-flex justify-content-between align-items-center mt-3">
     <span id="user-email" class="text-success font-weight-bold ml-2"></span>
@@ -41,7 +42,7 @@
       <input type="text" class="form-control" id="direccion">
 
       <div class="d-grid gap-2 mt-3">
-        <button class="btn btn-success btn-block" id="registrar-btn">Registrar Boleto</button>
+        <button class="btn btn-success btn-block" id="registrar-btn" disabled>Registrar Boleto</button>
         <button class="btn btn-secondary btn-block" id="limpiar-btn">Limpiar Campos</button>
         <a href="https://docs.google.com/spreadsheets/d/1ge2XOW6DfHXZA4msLmlFUHGyjcWIpf4DQbbJdCqHUCQ/edit#gid=0"
           target="_blank" class="btn btn-outline-primary btn-block">Ver boletos registrados</a>
@@ -51,5 +52,15 @@
 
   <script type="module" src="assets/js/rifa.js"></script>
 </body>
+<footer class="footer mt-5 py-3 bg-dark text-white">
+  <div class="container text-center">
+    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+      <img src="assets/img/logoBenabet.jpg" alt="Logo Benabet" width="28" height="28" class="mr-2 mb-2 mb-md-0">
+      <span class="mx-2">Powered by: <strong>Benabet</strong></span>
+      <span class="mx-2 text-muted">|</span>
+      <span><i class="mr-1"></i> Dev by: <strong>Bryan Cruz</strong></span>
+    </div>
+  </div>
+</footer>
 
 </html>

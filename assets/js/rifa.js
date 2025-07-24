@@ -1,5 +1,7 @@
 import CONFIG from "./config.js";
 
+
+const celularInput = document.getElementById("celular");
 // Validación de sesión
 const user = JSON.parse(localStorage.getItem("user"));
 if (!user) window.location.href = "login.html";
@@ -121,6 +123,30 @@ document.getElementById("btn-aleatorio").addEventListener("click", async () => {
     alert("Error al obtener número aleatorio");
   }
 });
+
+
+// VALIDACIÓN DE NÚMERO DE CELULAR
+
+
+
+// Función para validar número celular ecuatoriano
+function validarCelular(valor) {
+  const regex = /^0\d{9}$/; // Empieza con 0 + 9 dígitos más
+  return regex.test(valor);
+}
+
+// Verifica en tiempo real si el número es válido
+celularInput.addEventListener("input", () => {
+  const esValido = validarCelular(celularInput.value);
+  registrarBtn.disabled = !esValido;
+
+  if (!esValido && celularInput.value.length > 0) {
+    celularInput.classList.add("is-invalid");
+  } else {
+    celularInput.classList.remove("is-invalid");
+  }
+});
+
 
 // Cerrar sesión
 document.getElementById("logout-btn").addEventListener("click", () => {
