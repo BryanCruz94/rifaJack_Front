@@ -1,5 +1,5 @@
 const CONFIG = {
-    BACK_URL: "https://rifajackback-production.up.railway.app:3000/"
+    BACK_URL: "https://rifajackback-production.up.railway.app/"
     //BACK_URL: "http://localhost:3000/"
 };
 
