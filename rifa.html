@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RIFA SOLIDARIA DE AMIGOS DE JACK 🎟️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body class="container mt-4 mb-5">
+
+  <h2 class="text-center">🎫 RIFA SOLIDARIA DE AMIGOS DE JACK</h2>
+
+  <div class="d-flex justify-content-between align-items-center mt-3">
+    <span id="user-email" class="text-success font-weight-bold ml-2"></span>
+    <button id="logout-btn" class="btn btn-sm btn-outline-danger">Cerrar sesión</button>
+  </div>
+
+  <hr>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-6">
+      <label for="numero-boleto">Número de boleto</label>
+      <input type="number" class="form-control" id="numero-boleto" placeholder="Ej: 15">
+      <div class="d-flex justify-content-between mt-2">
+        <button class="btn btn-info flex-fill mr-1" id="verificar-btn">Verificar disponibilidad</button>
+        <button class="btn btn-warning flex-fill ml-1" id="btn-aleatorio">🎲 Número aleatorio</button>
+      </div>
+
+      <div class="alert mt-2 d-none" id="estado-boleto"></div>
+
+      <hr>
+
+      <label>Apellidos y Nombres</label>
+      <input type="text" class="form-control" id="nombres">
+      <label>Celular</label>
+      <input type="text" class="form-control" id="celular">
+      <label>Dirección</label>
+      <input type="text" class="form-control" id="direccion">
+
+      <div class="d-grid gap-2 mt-3">
+        <button class="btn btn-success btn-block" id="registrar-btn">Registrar Boleto</button>
+        <button class="btn btn-secondary btn-block" id="limpiar-btn">Limpiar Campos</button>
+        <a href="https://docs.google.com/spreadsheets/d/1ge2XOW6DfHXZA4msLmlFUHGyjcWIpf4DQbbJdCqHUCQ/edit#gid=0"
+          target="_blank" class="btn btn-outline-primary btn-block">Ver boletos registrados</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/rifa.js"></script>
+</body>
+
+</html>

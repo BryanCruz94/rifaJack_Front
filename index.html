@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIFA SOLIDARIA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="container mt-4 text-center">
+        <h2>RIFA SOLIDARIA</h2>
+        <p>Bienvenido a la web de asignación de boletos</p>
+        
+        <div id="g_id_onload"
+            data-client_id="258740707043-pd4bhqenj4ph157ve8ddsmrnbl0m2bf1.apps.googleusercontent.com"
+            data-context="signin"
+            data-callback="handleCredentialResponse"
+            data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin" data-type="standard"></div>
+
+        <h4 id="usuario"></h4>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
