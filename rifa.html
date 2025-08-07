@@ -6,6 +6,7 @@
   <title>RIFA SOLIDARIA DE AMIGOS DE JACK 🎟️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/style/style.css">
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
@@ -21,44 +22,48 @@
 
   <hr>
 
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-10 col-md-6">
-      <label for="numero-boleto">Número de boleto</label>
-      <input type="number" class="form-control" id="numero-boleto" placeholder="Ej: 15">
-      <div class="d-flex justify-content-between mt-2">
-        <button class="btn btn-info flex-fill mr-1" id="verificar-btn">Verificar disponibilidad</button>
-        <button class="btn btn-warning flex-fill ml-1" id="btn-aleatorio">🎲 Número aleatorio</button>
-      </div>
+  <div class="d-flex justify-content-center align-items-center" >
+    <div class="row justify-content-center fondo-imagen" >
+      <div class=" col-12 col-sm-10 col-md-6 fondo-vidrio">
+        <label for="numero-boleto">Elegir número de boleto</label>
+        <input type="number" class="form-control" id="numero-boleto" placeholder="Ej: 15">
+        <div class="d-flex justify-content-between mt-2">
+          <button class="btn btn-info flex-fill mr-1" id="verificar-btn">Verificar disponibilidad</button>
+          <button class="btn btn-warning flex-fill ml-1" id="btn-aleatorio">🎲 Número aleatorio</button>
+        </div>
 
-      <div class="alert mt-2 d-none" id="estado-boleto"></div>
+        <div class="alert mt-2 d-none" id="estado-boleto"></div>
 
-      <hr>
+        <hr>
 
-      <label>Apellidos y Nombres</label>
-      <input type="text" class="form-control" id="nombres">
-      <label>Celular</label>
-      <input type="text" class="form-control" id="celular">
-      <label>Dirección</label>
-      <input type="text" class="form-control" id="direccion">
+        <label>Apellidos y Nombres</label>
+        <input type="text" class="form-control" id="nombres">
+        <label>Celular</label>
+        <input type="text" class="form-control" id="celular">
+        <label>Dirección</label>
+        <input type="text" class="form-control" id="direccion">
 
-      <div class="d-grid gap-2 mt-3">
-        <button class="btn btn-success btn-block" id="registrar-btn" disabled>Registrar Boleto</button>
-        <button class="btn btn-secondary btn-block" id="limpiar-btn">Limpiar Campos</button>
-        <a href="https://docs.google.com/spreadsheets/d/1ge2XOW6DfHXZA4msLmlFUHGyjcWIpf4DQbbJdCqHUCQ/edit#gid=0"
-          target="_blank" class="btn btn-outline-primary btn-block">Ver boletos registrados</a>
+        <div class="d-grid gap-2 mt-3">
+          <button class="btn btn-success btn-block" id="registrar-btn" disabled>Registrar Boleto</button>
+          <button class="btn btn-light btn-block" id="limpiar-btn">Limpiar Campos</button>
+          <a href="https://docs.google.com/spreadsheets/d/1ge2XOW6DfHXZA4msLmlFUHGyjcWIpf4DQbbJdCqHUCQ/edit#gid=0"
+            target="_blank" class="btn btn-primary btn-block">Ver boletos registrados</a>
+        </div>
       </div>
     </div>
+
   </div>
+
 
   <script type="module" src="assets/js/rifa.js"></script>
 </body>
-<footer class="footer mt-5 py-3 bg-dark text-white">
+<footer class="footer mt-2 py-3 bg-dark text-white footer-redondo">
   <div class="container text-center">
     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
       <img src="assets/img/logoBenabet.jpg" alt="Logo Benabet" width="28" height="28" class="mr-2 mb-2 mb-md-0">
       <span class="mx-2">Powered by: <strong>Benabet</strong></span>
       <span class="mx-2 text-muted">|</span>
-      <span><i class="mr-1"></i> Dev by: <strong>Bryan Cruz</strong></span>
+      <span><i class="mr-1"></i> Dev by: <strong>Bryan Cruz</strong> V.02</span>
     </div>
   </div>
 </footer>

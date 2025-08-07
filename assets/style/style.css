@@ -1,0 +1,26 @@
+.fondo-vidrio {
+    border: 1px solid rgba(255, 255, 255, 0.464);
+    background-color: rgba(255, 255, 255, 0.41);
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    /* Efecto cristal difuminado */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+
+}
+
+.fondo-imagen {
+    border-radius: 20px;
+    background-image: url('../img/logoBenabet.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.footer-redondo{
+    border-radius: 10px;
+}
