@@ -21,7 +21,7 @@ verificarBtn.addEventListener("click", async () => {
   if (!numero) return alert("Ingrese un número de boleto");
 
   try {
-    const res = await fetch(`${CONFIG.BACK_URL}api/verificar-boleto?numero=${numero}`);
+    const res = await fetch(CONFIG.apiUrl(`api/verificar-boleto?numero=${numero}`));
     const data = await res.json();
 
     if (data.disponible) {
@@ -55,7 +55,7 @@ registrarBtn.addEventListener("click", async () => {
   }
 
   try {
-    const res = await fetch(`${CONFIG.BACK_URL}api/registrar-boleto`, {
+    const res = await fetch(CONFIG.apiUrl("api/registrar-boleto"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -105,7 +105,7 @@ document.getElementById("limpiar-btn").addEventListener("click", () => {
 // Botón para obtener número aleatorio disponible
 document.getElementById("btn-aleatorio").addEventListener("click", async () => {
   try {
-    const res = await fetch(`${CONFIG.BACK_URL}api/boletos-disponibles`);
+    const res = await fetch(CONFIG.apiUrl("api/boletos-disponibles"));
     const data = await res.json();
 
     if (!data.disponibles || data.disponibles.length === 0) {

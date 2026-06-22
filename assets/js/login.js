@@ -1,11 +1,13 @@
+import CONFIG from "./config.js";
+
 async function handleCredentialResponse(response) {
     const data = JSON.parse(atob(response.credential.split('.')[1]));
     const email = data.email || data.emails?.[0]?.value;
     if (!email) return alert("No se pudo obtener el email");
 
     try {
-        //const res = await fetch(`http://localhost:3000/api/verificar-evaluador?email=${encodeURIComponent(email)}`);
-        const res = await fetch(`https://rifajackback-production.up.railway.app/api/verificar-evaluador?email=${encodeURIComponent(email)}`);
+        const url = CONFIG.apiUrl(`api/verificar-evaluador?email=${encodeURIComponent(email)}`);
+        const res = await fetch(url);
         const result = await res.json();
 
         if (result.autorizado) {
@@ -22,3 +24,6 @@ async function handleCredentialResponse(response) {
         console.error(error);
     }
 }
+
+// Google Identity Services busca el callback en el ámbito global.
+window.handleCredentialResponse = handleCredentialResponse;
