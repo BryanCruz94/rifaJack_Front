@@ -1,26 +1,26 @@
-.fondo-vidrio {
-    border: 1px solid rgba(255, 255, 255, 0.464);
-    background-color: rgba(255, 255, 255, 0.41);
-    border-radius: 15px;
-    backdrop-filter: blur(3px);
-    /* Efecto cristal difuminado */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    /* Sombra suave */
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f7f8; }
+.pagina-rifa { padding: 1rem; }
+.encabezado-rifa h2 { margin: .5rem 0 .25rem; font-size: 1.6rem; }
+.encabezado-rifa p { margin-bottom: .75rem; }
+.logo-rifa { display: block; width: min(42vw, 140px); height: auto; margin: 0 auto; object-fit: contain; }
+.formulario-rifa { width: 100%; margin: 0 auto; }
+.fondo-vidrio { width: 100%; padding: 1rem; border: 1px solid rgba(255,255,255,.55); background: rgba(255,255,255,.82); border-radius: 15px; backdrop-filter: blur(4px); box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+.fondo-vidrio label { margin-top: .5rem; margin-bottom: .25rem; font-weight: 600; }
+.fondo-imagen { display: flex; align-items: center; width: 100%; min-height: 0; padding: .75rem; overflow: hidden; border-radius: 20px; background: url('../img/Fonfo-patitas.jpg') center/cover no-repeat; }
+.acciones-boleto { display: grid; grid-template-columns: 1fr; gap: .5rem; }
+.acciones-boleto .btn { width: 100%; }
+.footer-redondo { margin: 0 .75rem .75rem; border-radius: 10px; }
 
+@media (min-width: 576px) {
+  .pagina-rifa { padding: 1.5rem; }
+  .logo-rifa { width: 150px; }
+  .acciones-boleto { grid-template-columns: 2fr 1fr; }
+  .fondo-imagen { padding: 1.5rem; }
 }
 
-.fondo-imagen {
-    border-radius: 20px;
-    background-image: url('../img/logoBenabet.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    width: 100%;
-    overflow: hidden;
-    
-}
-
-.footer-redondo{
-    border-radius: 10px;
+@media (min-width: 768px) {
+  .formulario-rifa { max-width: 850px; }
+  .fondo-vidrio { max-width: 560px; margin: 0 auto; padding: 1.5rem; }
+  .encabezado-rifa h2 { font-size: 2rem; }
 }
