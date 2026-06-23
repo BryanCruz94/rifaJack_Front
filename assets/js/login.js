@@ -26,4 +26,4 @@ async function handleCredentialResponse(response) {
 }
 
 // Google Identity Services busca el callback en el ámbito global.
-window.handleCredentialResponse = handleCredentialResponse;
+window.loginWithGoogle = handleCredentialResponse;

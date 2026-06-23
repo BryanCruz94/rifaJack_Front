@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIFA SOLIDARIA</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script>
+        window.handleCredentialResponse = function (response) {
+            if (typeof window.loginWithGoogle === "function") {
+                return window.loginWithGoogle(response);
+            }
+
+            console.error("El login de Google todavía no está listo.");
+            alert("El login todavía se está cargando. Intenta nuevamente.");
+        };
+    </script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
     <div class="container mt-4 text-center">
-        <h2>RIFA SOLIDARIA</h2>
+        <h2>RIFA ESPETS</h2>
         <p>Bienvenido a la web de asignación de boletos</p>
         
         <div id="g_id_onload"
@@ -28,10 +38,13 @@
 <footer class="footer mt-2 py-3 bg-dark text-white footer-redondo">
   <div class="container text-center">
     <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
-      <img src="assets/img/logoBenabet.jpg" alt="Logo Benabet" width="28" height="28" class="mr-2 mb-2 mb-md-0">
-      <span class="mx-2">Powered by: <strong>Benabet</strong></span>
+      <img src="assets/img/logo_transparente - copia.png" alt="Logo Benabet" width="28" height="28" class="mr-2 mb-2 mb-md-0">
+      <a href="https://www.nairbdev.com" target="_blank" class="text-white">
+        <span class="mx-2">Powered by: <strong>NairbDev</strong></span>
+      </a>
+
       <span class="mx-2 text-muted">|</span>
-      <span><i class="mr-1"></i> Dev by: <strong>Bryan Cruz</strong> V.02</span>
+      <span><i class="mr-1"></i> Dev by: <strong>Bryan Cruz</strong> V.2.0.1</span>
     </div>
   </div>
 </footer>
