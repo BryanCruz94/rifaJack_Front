@@ -3,7 +3,7 @@ const ENVIRONMENT = "production";
 
 const API_URLS = {
     local: "http://localhost:3000",
-    production: "https://rifajackback-production.up.railway.app/"
+    production: "https://rifajackback-production.up.railway.app"
 };
 
 if (!API_URLS[ENVIRONMENT]) {
