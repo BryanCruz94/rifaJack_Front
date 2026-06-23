@@ -7,6 +7,7 @@ async function handleCredentialResponse(response) {
 
     try {
         const url = CONFIG.apiUrl(`api/verificar-evaluador?email=${encodeURIComponent(email)}`);
+        console.log("URL generada:", url);
         const res = await fetch(url);
         const result = await res.json();
 
