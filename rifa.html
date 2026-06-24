@@ -11,69 +11,85 @@
 </head>
 
 <body>
-<main class="container pagina-rifa">
+  <main class="container pagina-rifa">
 
-  <header class="encabezado-rifa text-center">
-    <img src="assets/img/Logo-Espets.png" alt="Logo ESPETS" class="logo-rifa">
-    <h2>RIFA ESPETS</h2>
-    <p>Fecha de rifa: 01 Agosto de 2026</p>
-  </header>
-  <hr>
-  <div class="d-flex justify-content-between align-items-center mt-3">
-    <span id="user-email" class="text-success font-weight-bold ml-2"></span>
-    <button id="logout-btn" class="btn btn-sm btn-outline-danger">Cerrar sesión</button>
-  </div>
+    <header class="encabezado-rifa text-center">
+      <img src="assets/img/Logo-Espets.png" alt="Logo ESPETS" class="logo-rifa">
+      <h2>RIFA ESPETS</h2>
+      <p>Fecha de rifa: Viernes 17 Julio de 2026</p>
+    </header>
+    <hr>
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <span id="user-email" class="text-success font-weight-bold ml-2"></span>
+      <button id="logout-btn" class="btn btn-sm btn-outline-danger">Cerrar sesión</button>
+    </div>
 
-  <hr>
+    <hr>
 
-  <div class="formulario-rifa">
-    <div class="fondo-imagen">
-      <div class="fondo-vidrio">
-        <label for="numero-boleto">Elegir número de boleto</label>
-        <input type="number" class="form-control" id="numero-boleto" placeholder="Ej: 15">
-        <div class="acciones-boleto mt-2">
-          <button class="btn btn-info" id="verificar-btn">Verificar disponibilidad</button>
-          <button class="btn btn-warning" id="btn-aleatorio">Aleatorio</button>
+    <div class="formulario-rifa">
+      <div class="fondo-imagen">
+        <div class="fondo-vidrio">
+          <label for="numero-boleto">Elegir número de boleto</label>
+          <input type="number" class="form-control" id="numero-boleto" placeholder="Ej: 15">
+          <div class="acciones-boleto mt-2">
+            <button class="btn btn-info" id="verificar-btn">Verificar disponibilidad</button>
+            <button class="btn btn-warning" id="btn-aleatorio">Aleatorio</button>
+          </div>
+
+          <div class="alert mt-2 d-none" id="estado-boleto"></div>
+
+          <hr>
+
+          <label>Apellidos y Nombres</label>
+          <input type="text" class="form-control" id="nombres">
+          <label>Celular</label>
+          <input type="text" class="form-control" id="celular">
+          <label>Dirección</label>
+          <input type="text" class="form-control" id="direccion">
+
+          <div class="d-grid gap-2 mt-3">
+            <button class="btn btn-success btn-block" id="registrar-btn" disabled>Registrar Boleto</button>
+            <button class="btn btn-light btn-block" id="limpiar-btn">Limpiar Campos</button>
+            <a href="https://docs.google.com/spreadsheets/d/1ge2XOW6DfHXZA4msLmlFUHGyjcWIpf4DQbbJdCqHUCQ/edit#gid=0"
+              target="_blank" class="btn btn-primary btn-block">Ver boletos registrados</a>
+          </div>
         </div>
-
-        <div class="alert mt-2 d-none" id="estado-boleto"></div>
-
-        <hr>
-
-        <label>Apellidos y Nombres</label>
-        <input type="text" class="form-control" id="nombres">
-        <label>Celular</label>
-        <input type="text" class="form-control" id="celular">
-        <label>Dirección</label>
-        <input type="text" class="form-control" id="direccion">
-
-        <div class="d-grid gap-2 mt-3">
-          <button class="btn btn-success btn-block" id="registrar-btn" disabled>Registrar Boleto</button>
-          <button class="btn btn-light btn-block" id="limpiar-btn">Limpiar Campos</button>
-          <a href="https://docs.google.com/spreadsheets/d/1ge2XOW6DfHXZA4msLmlFUHGyjcWIpf4DQbbJdCqHUCQ/edit#gid=0"
-            target="_blank" class="btn btn-primary btn-block">Ver boletos registrados</a>
+        <hr class="separador-banco">
+        <!-- Sección datos bancarios -->
+        <div class="fondo-vidrio datos-bancarios">
+          <label for="">Número de cuenta para transferencias</label>
+          <div class="alert alert-info">
+            <p><strong>Banco:</strong> Banco Pichincha
+            <img src="assets/img/logo_pichincha.png" alt="Logo Banco Pichincha" width="100" >
+            </p>
+            <p><strong>Número de cuenta:</strong> 2213283806</p>
+            <p><strong>Titular:</strong> Tomalá Castro Lesly</p>
+            <p><strong>CI:</strong> 1724794878</p>
+          </div>
+          <label for="">Código QR Banco Pichincha</label>
+          <img src="assets/img/QR  Lesly Tomala.png" alt="Código QR Banco Pichincha" class="img-fluid">
         </div>
+        <!-- Fin de seccion datos bancarios -->
       </div>
     </div>
 
-  </div>
 
+    <script type="module" src="assets/js/rifa.js"></script>
+  </main>
+  <footer class="footer mt-2 py-3 bg-dark text-white footer-redondo">
+    <div class="container text-center">
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+        <img src="assets/img/logo_transparente - copia.png" alt="Logo Benabet" width="28" height="28"
+          class="mr-2 mb-2 mb-md-0">
+        <a href="https://www.nairbdev.com" target="_blank" class="text-white">
+          <span class="mx-2">Powered by: <strong>NairbDev</strong></span>
+        </a>
 
-  <script type="module" src="assets/js/rifa.js"></script>
-</main>
-<footer class="footer mt-2 py-3 bg-dark text-white footer-redondo">
-  <div class="container text-center">
-    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
-      <img src="assets/img/logo_transparente - copia.png" alt="Logo Benabet" width="28" height="28" class="mr-2 mb-2 mb-md-0">
-      <a href="https://www.nairbdev.com" target="_blank" class="text-white">
-        <span class="mx-2">Powered by: <strong>NairbDev</strong></span>
-      </a>
-
-      <span class="mx-2 text-muted">|</span>
-      <span><i class="mr-1"></i> Dev by: <strong>Bryan Cruz</strong> V.2.0.3</span>
+        <span class="mx-2 text-muted">|</span>
+        <span><i class="mr-1"></i> Dev by: <strong>Bryan Cruz</strong> V.2.0.3</span>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 </body>
 
 </html>
