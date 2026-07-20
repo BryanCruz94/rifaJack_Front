@@ -3,40 +3,45 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Sistema de Sorteo</title>
+  <title>Reimprimir boleto | ESPETS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/style/style.css">
 </head>
 
 <body>
-  <main class="container pagina-rifa pagina-sorteo">
+  <main class="container pagina-rifa">
     <header class="encabezado-rifa text-center">
       <img src="assets/img/Logo-Espets.png" alt="Logo ESPETS" class="logo-rifa">
-      <h2>Sistema de Sorteo</h2>
-      <p>Impresi&oacute;n de boletos comprados</p>
+      <h2>Reimprimir boleto</h2>
+      <p>Busca un boleto comprado para abrir su comprobante de respaldo.</p>
     </header>
-
-    <hr>
-
-    <div class="d-flex justify-content-between align-items-center mt-3">
-      <span id="user-email" class="text-success font-weight-bold ml-2"></span>
-      <button id="logout-btn" class="btn btn-sm btn-outline-danger">Cerrar sesi&oacute;n</button>
-    </div>
 
     <hr>
 
     <section class="formulario-rifa">
       <div class="fondo-imagen">
         <div class="fondo-vidrio">
-          <label for="nombre-rifa">Nombre de la Rifa</label>
-          <input type="text" class="form-control" id="nombre-rifa" placeholder="Ej: RIFA ESPETS">
+          <label for="numero-boleto-reimpresion">N&uacute;mero de boleto</label>
+          <input
+            type="number"
+            class="form-control"
+            id="numero-boleto-reimpresion"
+            inputmode="numeric"
+            min="1"
+            step="1"
+            placeholder="Ej: 15"
+          >
 
-          <button class="btn btn-success btn-block mt-3" id="imprimir-boletos-btn">
-            Imprimir boletos comprados
+          <button class="btn btn-success btn-block mt-3" id="buscar-boleto-btn">
+            Reimprimir boleto
           </button>
 
-          <div class="alert mt-3 d-none" id="estado-sorteo"></div>
+          <button class="btn btn-light btn-block" id="volver-rifas-btn">
+            Volver a rifas
+          </button>
+
+          <div class="alert mt-3 d-none" id="estado-reimpresion"></div>
         </div>
       </div>
     </section>
@@ -57,8 +62,7 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
-  <script type="module" src="assets/js/sistemaSorteo.js"></script>
+  <script type="module" src="assets/js/reimprimir.js"></script>
 </body>
 
 </html>
