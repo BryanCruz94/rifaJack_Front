@@ -5,7 +5,6 @@ if (!user) window.location.href = "index.html";
 
 const numeroInput = document.getElementById("numero-boleto-reimpresion");
 const buscarBtn = document.getElementById("buscar-boleto-btn");
-const volverBtn = document.getElementById("volver-rifas-btn");
 const estadoDiv = document.getElementById("estado-reimpresion");
 const textoBuscarOriginal = buscarBtn.textContent.trim();
 
@@ -32,7 +31,6 @@ function cambiarEstadoBusqueda(busquedaActiva) {
 numeroInput.addEventListener("input", () => {
   numeroInput.value = numeroInput.value.replace(/\D/g, "");
 });
-
 function buscarBoletoVendido(numero) {
   const request = new XMLHttpRequest();
   request.open(
@@ -104,8 +102,4 @@ buscarBtn.addEventListener("click", () => {
   requestAnimationFrame(() => {
     requestAnimationFrame(() => procesarBusqueda(numero));
   });
-});
-
-volverBtn.addEventListener("click", () => {
-  window.location.href = "/rifa.html";
 });

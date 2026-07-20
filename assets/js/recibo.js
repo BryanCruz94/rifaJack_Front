@@ -23,7 +23,7 @@ function mostrarMensajeNoVendido(mensaje) {
     </div>
   `;
   registrarLink.textContent = "Volver a rifas";
-  registrarLink.href = "/rifa.html";
+  registrarLink.href = "./rifa.html";
 }
 
 async function cargarBoletoVendido(numero) {

@@ -102,10 +102,6 @@ document.getElementById("limpiar-btn").addEventListener("click", () => {
   disponible = false;
 });
 
-document.getElementById("reimprimir-btn").addEventListener("click", () => {
-  window.location.href = "reimprimir.html";
-});
-
 // Botón para obtener número aleatorio disponible
 document.getElementById("btn-aleatorio").addEventListener("click", async () => {
   try {
